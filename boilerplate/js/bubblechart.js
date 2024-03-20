@@ -114,7 +114,7 @@ window.onload = function(){
         .attr("text-anchor", "middle")
         .attr("x", 450)
         .attr("y", 30)
-        .text("City Populations");
+        .text("City Populations of Wisconsin");
 
     var labels = container.selectAll(".labels")
         .data(cityPop)
