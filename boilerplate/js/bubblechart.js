@@ -26,13 +26,13 @@ var cityPop = [
 window.onload = function(){
     var container = d3.select("body") //get the <body> element from the DOM
         .append("svg") //put a new svg in the body
-        .attr("width", 900) //assign the width
+        .attr("width", 950) //assign the width
         .attr("height", 500) //assign the height
         .attr("class", "container") //always assign a class (as the block name) for styling and future selection
         .style("background-color","rgba(0,0,0,0.2");
 
     var innerRect = container.append("rect")        //put the rectangle in svg
-        .datum(400)                 //a single value is datum
+        .datum(430)                 //a single value is datum
         .attr("width",function(d){
             return d*2; //width is 400*2
         })         
