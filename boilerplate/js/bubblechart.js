@@ -35,21 +35,21 @@ window.onload = function(){
         .datum(430)                 //a single value is datum
         .attr("width",function(d){
             return d*2; //width is 400*2
-        })         
+            })         
         .attr("height",function(d){
             return d;   //height is 400
-        })   
+            })   
         .attr("class","innerRect")      //class name
         .attr("x",50)                   //position from left on the x (horizontal) axis
         .attr("y",50)                   //position from top on the y (vertical) axis
         .style("fill","#FFFFFF");        //fill color     
     var minPop = d3.min(cityPop,function(d){        //get minimum value
         return d.population;
-    });
+        });
 
     var maxPop = d3.max(cityPop, function(d){       //get maximum population value
         return d.population;
-    });
+        });
 
     var y = d3.scaleLinear()
         .range([450, 50])
