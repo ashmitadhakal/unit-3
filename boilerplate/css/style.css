@@ -1,5 +1,12 @@
 /*Stlesheet by Ashmita, 2024*/
 
+.map {
+    border: medium solid #999;
+}
+.regions{
+    fill: #e6ffff;
+    stroke: black;
+}
 .axis path,
 .axis line {
     fill: none;
