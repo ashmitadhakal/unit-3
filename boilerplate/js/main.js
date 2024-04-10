@@ -7,12 +7,13 @@
 
     //begin script when window loads
     window.onload = setMap();
+    
 
     //set uo chloropleth map
     function setMap(){
         //map frame dimensions
         var width = window.innerWidth*0.45,
-            height = 400;
+            height = 473;
 
         //create new svg container for map
         var map = d3.select("body")
@@ -26,7 +27,7 @@
             .center([0,28.41])
             .rotate([-84.13,0,0])
             .parallels([26.93,29.88])
-            .scale(3000)
+            .scale(2000)
             .translate([width / 2.1, height / 2]);
         var path = d3.geoPath()
             .projection(projection);
@@ -56,6 +57,12 @@
                 .attr("class","countries")
                 .attr("d",path);
 
+            var mapTitle = map.append("text")
+                .attr("x", 40)
+                .attr("y", 40)
+                .attr("class", "mapTitle")
+                .text("Number of Technical Schools in Each Province of Nepal");    
+
             //place graticule in map
             setGraticule(map, path);
 
@@ -68,10 +75,11 @@
             //add enumeration units to the map
             setEnumerationUnits(nepalProvince, map, path, colorScale);
 
+
             setChart(csvData, colorScale);
         };
     };
-
+    
     //function to create a coordinated bar chart
     function setChart(csvData, colorScale){
         //chart frame dimensions
